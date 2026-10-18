@@ -217,7 +217,9 @@ build_target() {
         scripts/config --file "${OUT_DIR}/.config" \
             -e KSU \
             -e THREAD_INFO_IN_TASK \
-            -e KSU_SUSFS \
+            -e KSU_SUSFS
+        echo "[*] Injecting Hybrid Mount configurations..."
+        scripts/config --file "${OUT_DIR}/.config" \
             -m HYBRIDMOUNT
     fi
 
