@@ -221,7 +221,7 @@ build_target() {
             -e KSU_SUSFS
         echo "[*] Injecting Hybrid Mount configurations..."
         scripts/config --file "${OUT_DIR}/.config" \
-            -m HYBRIDMOUNT
+            -e HYBRIDMOUNT
     fi
 
     # 3. MIUI configurations
