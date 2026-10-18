@@ -307,9 +307,9 @@ build_target() {
         fi
         
         # 确定 ZIP 文件名
-        local KSU_ZIP_STR="NoKernelSU"
+        local KSU_ZIP_STR="default"
         if [ "$ENABLE_KSU" -eq 1 ]; then
-            KSU_ZIP_STR="ReSukiSU-SuSFS"
+            KSU_ZIP_STR="BakaSU-SuSFS"
         fi
         local GIT_COMMIT_ID=$(git rev-parse --short=8 HEAD 2>/dev/null || echo "unknown")
         local OS_UPPER=$(echo "$OS_TYPE" | tr '[:lower:]' '[:upper:]')
