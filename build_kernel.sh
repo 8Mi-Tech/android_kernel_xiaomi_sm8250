@@ -73,11 +73,18 @@ mkdir -p "$CCACHE_DIR"
 # ==========================================
 if [ "$ENABLE_KSU" -eq 1 ]; then
     echo "==========================================="
-    echo " [*] Initializing KernelSU (ReSukiSU) Setup"
+    echo " [*] Initializing KernelSU (BakaSU) Setup"
     echo "==========================================="
-    echo "[*] Downloading and running ReSukiSU remote setup script..."
-    curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-    echo "[+] KernelSU setup finished."
+    echo "[*] Downloading and running BakaSU remote setup script..."
+    curl -LSs "https://raw.githubusercontent.com/Baka-SU/BakaSU/main/kernel/setup.sh" | bash
+    echo "[+] BakaSU setup finished."
+
+    echo "==========================================="
+    echo " [*] Initializing VFS (Hybrid Mount) Setup"
+    echo "==========================================="
+    echo "[*] Downloading and running VFS remote setup script..."
+    curl -LSs "https://raw.githubusercontent.com/Hybrid-Mount/meta-hybrid_mount/dev/module/vfs/setup.sh" | bash
+    echo "[+] VFS setup finished."
 fi
 
 # ==========================================
